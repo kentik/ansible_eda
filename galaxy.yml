@@ -4,13 +4,12 @@ name: ansible_eda
 version: 1.0.0
 readme: README.md
 authors:
-  - Justin Ryburn <jryburn@kentik.com>
-  - Ian Pye <pye@kentik.com>
+  - Kentik <support@kentik.com>
 description: Ansible Collection for collect Kentik alering notification JSON webhooks for Event Driven Ansible (EDA)
 license:
   - GPL-2.0-or-later
 license_file: "LICENSE"
-tags: [networking]
+tags: [kentik, eda, networking]
 
 # Collections that this collection requires to be installed for it to be usable. The key of the dict is the
 # collection label 'namespace.name'. The value is a version range
@@ -22,10 +21,13 @@ dependencies: {}
 repository: https://github.com/kentik/ansible_eda
 
 # The URL to any online docs
-documentation: http://kb.kentik.com
+documentation: https://github.com/kentik/ansible_eda/blob/main/README.md
 
 # The URL to the homepage of the collection/project
 homepage: https://kentik.com
+
+# The URL to the collection issue tracker
+issues: https://github.com/kentik/ansible_eda/issues
 
 # A list of file glob-like patterns used to filter any files or directories that should not be included in the build
 # artifact. A pattern is matched from the relative path of the file or directory of the collection directory. This
