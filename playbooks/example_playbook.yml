@@ -1,0 +1,7 @@
+---
+- name: Kentik event-driven-ansible test
+  hosts: localhost # use for local testing of the plugin
+  tasks:
+    - name: Print Kentik alert
+      ansible.buitlin.debug:
+        msg: "{{ ansible_eda.event.payload }}"

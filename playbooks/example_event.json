@@ -1,0 +1,23 @@
+{
+    "CompanyID": 24761,
+    "CurrentState": "n/a",
+    "Description": "Insight for Through Site Comparison",
+    "Dimensions": {},
+    "EndTime": "2022-11-02 13:50:00 UTC",
+    "InsightDataSourceType": "ksql",
+    "InsightID": "k654321097",
+    "InsightName": "operate.site.bpsThroughWeekOverWeek",
+    "InsightPlainDescription": "Foobar Amsterdam AMS13 had 22% more through traffic (+139 Kbits/s) this week compared to last week.",
+    "IsActive": true,
+    "Links": {
+        "InsightDetailsURL": "https://portal.kentik.com/v4/operate/insights/k611587433",
+        "InsightsMainURL": "https://portal.kentik.com/v4/operate/insights",
+        "InsightsSeverityURL": "https://portal.kentik.com/v4/operate/insights?severities=notice"
+    },
+    "Metrics": {},
+    "PreviousState": "n/a",
+    "StartTime": "2022-11-02 11:50:00 UTC",
+    "Type": "EVENT_VIEW_TYPE_INSIGHT",
+    "issue": [],
+    "statistic": {}
+}
