@@ -5,7 +5,7 @@
   ## Define our source for events
 
   sources:
-    - kentik.ansible_eda.kentik_webhook:
+    - kentik_webhook: # for local tests only. In production use kentik.ansible_eda.kentik_webhook
         host: 0.0.0.0
         port: 80
 
