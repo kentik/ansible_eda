@@ -12,7 +12,7 @@
   ## Define the conditions we are looking for
 
   rules:
-    - name: Say Hello
+    - name: Print out the alert
       condition: event.i == 1
 
   ## Define the action we should take should the condition be met
