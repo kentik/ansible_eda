@@ -22,6 +22,7 @@ from aiohttp import web
 logger = logging.getLogger(__name__)
 routes = web.RouteTableDef()
 
+
 # Initialize the loggger configuration
 def _initialize_logger_config() -> None:
     logging.basicConfig(
@@ -30,11 +31,12 @@ def _initialize_logger_config() -> None:
         datefmt="%Y-%m-%d %I:%M:%S",
     )
 
+
 # Process incoming webhook alert notifications from Kentik
 @routes.post("/alert")
 async def webhook(request: web.Request) -> web.Response:
     """Process incoming webhook alert notifications from Kentik
-    
+
     Parameters
     ----------
     request : web.Request
@@ -48,7 +50,7 @@ async def webhook(request: web.Request) -> web.Response:
     ------
     HTTPBadRequest
         If the payload can't be parsed as JSON
-        
+
     """
     logger.info("Received alert")
     try:
@@ -66,6 +68,7 @@ async def webhook(request: web.Request) -> web.Response:
     await request.app["queue"].put(data)
     return web.json_response({})
 
+
 # Set app_attr settings in a dictionary
 def set_app_attr(args: dict[str, Any]) -> dict[str, Any]:
     """Set app_attr settings in a dictionary
@@ -74,12 +77,12 @@ def set_app_attr(args: dict[str, Any]) -> dict[str, Any]:
     ----------
     args : Dict[str,Any]
         Empty dictionary of arguments
-    
+
     Returns
     -------
     args : Dict[str,Any]
         Args containing the host and port
-    
+
     """
     if "host" not in args:
         host="0.0.0.0"
@@ -91,10 +94,11 @@ def set_app_attr(args: dict[str, Any]) -> dict[str, Any]:
 
     return app_attrs
 
+
 # Entrypoint from ansible-rulebook
 async def main(queue: asyncio.Queue, args: dict[str, Any]) -> None:
     """Receive events via webhook.
-    
+
     Parameters
     ----------
     queue : asyncio.Queue
