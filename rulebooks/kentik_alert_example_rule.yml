@@ -15,7 +15,7 @@
     - name: Print out the alert
       condition: event.i == 1
 
-  ## Define the action we should take should the condition be met
+      ## Define the action we should take should the condition be met
 
       action:
         run_playbook:

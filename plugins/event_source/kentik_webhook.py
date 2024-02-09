@@ -56,7 +56,9 @@ async def webhook(request: web.Request) -> web.Response:
     try:
         payload = await request.json()
     except json.JSONDecodeError as exc:
-        logger.warning("Wrong body request: failed to decode JSON payload: %s", exc)
+        logger.warning(
+            "Wrong body request: failed to decode JSON payload: %s", exc
+        )
         raise web.HTTPBadRequest(text="Invalid JSON payload") from None
     headers = dict(request.headers)
     headers.pop("Authorization", None)
@@ -84,10 +86,11 @@ def set_app_attr(args: dict[str, Any]) -> dict[str, Any]:
         Args containing the host and port
 
     """
-    if "host" not in args:
-        host = "0.0.0.0"
-    if "port" not in args:
-        port = 5000
+    # Not really used since the values are fed in from the main.
+    # if "host" not in args:
+    #     host = "0.0.0.0"
+    # if "port" not in args:
+    #     port = 5000
     app_attrs = {}
     app_attrs["host"] = args.get("host")
     app_attrs["port"] = args.get("port")
@@ -135,7 +138,8 @@ async def main(queue: asyncio.Queue, args: dict[str, Any]) -> None:
         await runner.cleanup()
 
 if __name__ == "__main__":
-    """MockQueue if running directly."""
+    # MockQueue is used if running directly
+    # via python and not part of an Ansible rulebook.
 
     class MockQueue:
         """A fake queue."""
@@ -148,8 +152,8 @@ if __name__ == "__main__":
         main(
             MockQueue(),
             {
-                "host": "localhost",
-                "port": 80,
+                "host": "0.0.0.0",
+                "port": 5000,
             },
         ),
     )
