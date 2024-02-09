@@ -14,7 +14,7 @@ Arguments:
 import asyncio
 import json
 import logging
-from collections.abc import Callable
+# from collections.abc import Callable
 from typing import Any
 
 from aiohttp import web
@@ -85,9 +85,9 @@ def set_app_attr(args: dict[str, Any]) -> dict[str, Any]:
 
     """
     if "host" not in args:
-        host="0.0.0.0"
+        host = "0.0.0.0"
     if "port" not in args:
-        port=5000
+        port = 5000
     app_attrs = {}
     app_attrs["host"] = args.get("host")
     app_attrs["port"] = args.get("port")
@@ -109,7 +109,7 @@ async def main(queue: asyncio.Queue, args: dict[str, Any]) -> None:
     """
     _initialize_logger_config()
     logging.info("Starting kentik_webhook...")
-    
+
     app_attrs = set_app_attr(args)
     app = web.Application()
     app.add_routes(routes)
@@ -143,7 +143,7 @@ if __name__ == "__main__":
         async def put(self: "MockQueue", event: dict) -> None:
             """Print the event."""
             print(event)
-    
+
     asyncio.run(
         main(
             MockQueue(),
