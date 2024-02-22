@@ -6,8 +6,6 @@ readme: README.md
 authors:
   - Kentik <support@kentik.com>
 description: Ansible Collection for collect Kentik alering notification JSON webhooks for Event Driven Ansible (EDA)
-license:
-  - GPL-2.0-or-later
 license_file: "LICENSE"
 tags: [kentik, eda, networking]
 
