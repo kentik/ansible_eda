@@ -7,7 +7,7 @@ This event source plugin from Kentik accepts alert notification JSON and works i
 * Ansible Automation Platform with EDA Controller instance
 
 ## Example rulebook
-```
+```yaml
 ---
 - name: Listen for alerts using kentik_webhook
   hosts: all
