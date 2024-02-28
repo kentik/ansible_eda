@@ -1,7 +1,7 @@
 ---
 namespace: kentik
 name: ansible_eda
-version: 1.0.0
+version: 1.0.1
 readme: README.md
 authors:
   - Kentik <support@kentik.com>
@@ -31,4 +31,4 @@ issues: https://github.com/kentik/ansible_eda/issues
 # artifact. A pattern is matched from the relative path of the file or directory of the collection directory. This
 # uses 'fnmatch' to match the files or directories. Some directories and files like 'galaxy.yml', '*.pyc', '*.retry',
 # and '.git' are always filtered. Mutually exclusive with 'manifest'
-build_ignore: []
+build_ignore: [.github/, tox.ini]
