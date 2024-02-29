@@ -3,5 +3,5 @@
   hosts: localhost # use for local testing of the plugin
   tasks:
     - name: Print Kentik alert
-      ansible.buitlin.debug:
+      ansible.builtin.debug:
         msg: "{{ ansible_eda.event.payload }}"
