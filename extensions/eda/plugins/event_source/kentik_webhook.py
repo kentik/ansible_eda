@@ -7,7 +7,7 @@ The message must be a valid JSON object.
 
 Arguments:
 ---------
-    host:     The hostname to listen to. Defaults to 0.0.0.0 (all interfaces)
+    host:     The hostname to listen to. Defaults to 127.0.0.1 (localhost)
     port:     The TCP port to listen to.  Defaults to 5000
 
 """
@@ -76,12 +76,12 @@ def set_app_attr(args: dict[str, Any]) -> dict[str, Any]:
 
     Parameters
     ----------
-    args : Dict[str,Any]
+    args : dict[str,Any]
         Empty dictionary of arguments
 
     Returns
     -------
-    args : Dict[str,Any]
+    args : dict[str,Any]
         Args containing the host and port
 
     """
@@ -100,8 +100,8 @@ async def main(queue: asyncio.Queue, args: dict[str, Any]) -> None:
     ----------
     queue : asyncio.Queue
         Problem queue
-    args : Dict[str,Any])
-        Args containing the host and port
+    args : dict[str,Any]
+        Dictionary of args containing the host and port
 
     """
     _initialize_logger_config()
@@ -140,7 +140,7 @@ if __name__ == "__main__":
 
         async def put(self: "MockQueue", event: dict) -> None:
             """Print the event."""
-            print(event)
+            print(event)  # noqa: T201
 
     asyncio.run(
         main(

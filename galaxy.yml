@@ -1,7 +1,7 @@
 ---
 namespace: kentik
 name: ansible_eda
-version: 1.0.2
+version: 1.0.3
 readme: README.md
 authors:
   - Kentik <support@kentik.com>
