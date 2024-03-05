@@ -14,7 +14,7 @@ Arguments:
 import asyncio
 import json
 import logging
-from typing import Any
+from typing import Any, Dict
 
 from aiohttp import web
 
@@ -76,12 +76,12 @@ def set_app_attr(args: dict[str, Any]) -> dict[str, Any]:
 
     Parameters
     ----------
-    args : dict[str,Any]
+    args : Dict[str,Any]
         Empty dictionary of arguments
 
     Returns
     -------
-    args : dict[str,Any]
+    args : Dict[str,Any]
         Args containing the host and port
 
     """
@@ -100,7 +100,7 @@ async def main(queue: asyncio.Queue, args: dict[str, Any]) -> None:
     ----------
     queue : asyncio.Queue
         Problem queue
-    args : dict[str,Any]
+    args : Dict[str,Any]
         Dictionary of args containing the host and port
 
     """
