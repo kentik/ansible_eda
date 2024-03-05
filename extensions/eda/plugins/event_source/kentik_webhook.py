@@ -14,7 +14,7 @@ Arguments:
 import asyncio
 import json
 import logging
-from typing import Any, Dict
+from typing import Any
 
 from aiohttp import web
 
@@ -139,7 +139,14 @@ if __name__ == "__main__":
         """A fake queue."""
 
         async def put(self: "MockQueue", event: dict) -> None:
-            """Print the event."""
+            """Print the event.
+
+            Parameters
+            ----------
+            event : dict
+                Event
+
+            """
             print(event)  # noqa: T201
 
     asyncio.run(
