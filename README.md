@@ -1,6 +1,6 @@
 # Kentik Collection for Ansible
 
-The Kentik Collection for Ansible includes an event source plugin from Kentik accepts alert notification JSON and works in conjunction with Ansible EDA rulebooks to allow users to automate changes to their environment.
+The Kentik Collection for Ansible includes an event source plugin from Kentik that accepts alert notification JSON and works in conjunction with Ansible EDA rulebooks to allow users to automate changes to their environment.
 
 ## Code of Conduct
 We follow the [Ansible Code of Conduct](https://docs.ansible.com/ansible/devel/community/code_of_conduct.html) in all our interactions within this project.
@@ -11,7 +11,7 @@ If you encounter abusive behavior, please refer to the [policy violations](https
 
 Join us on:
 * Email:
-    * [Support email](mailto:support@kentik.com)
+    * [Support email](mailto:support@kentik.com): Email alias for opening tickets and requesting support from Kentik
 * Slack:
     * [Kentik Users](https://www.kentik.com/go/kentik-community-slack-signup/): Slack workspace for all Kentik users to colloborate
 
@@ -27,7 +27,7 @@ We are actively accepting new contributors and all types of contributions are ve
 
 Don't know how to start? Refer to the [Ansible community guide](https://docs.ansible.com/ansible/devel/community/index.html)!
 
-If you find problems, please open an issue or create a PR against the [Kentik collection repository](https://github.com/kentik/ansible_eda).
+If you find problems, please open an issue or create a PR against the [Kentik collection repository](https://github.com/kentik/ansible_eda/issues).
 
 See [CONTRIBUTING.md](https://github.com/kentik/ansible_eda/blob/main/CONTRIBUTING.md) for more details.
 
