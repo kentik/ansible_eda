@@ -188,7 +188,7 @@ jobs:
           - devel
         # - milestone
         python:
-          - '3.7'
+        #  - '3.7'
           - '3.8'
           - '3.9'
           - '3.10'
@@ -199,14 +199,14 @@ jobs:
           # https://github.com/ansible-collections/news-for-maintainers in a timely manner,
           # consider dropping testing against EOL versions and versions you don't support.
           # ansible-core 2.14
-          - ansible: stable-2.14
-            python: '2.7'
-          - ansible: stable-2.14
-            python: '3.5'
-          - ansible: stable-2.14
-            python: '3.6'
-          - ansible: stable-2.14
-            python: '3.7'
+          #- ansible: stable-2.14
+          #  python: '2.7'
+          #- ansible: stable-2.14
+          #  python: '3.5'
+          #- ansible: stable-2.14
+          #  python: '3.6'
+          #- ansible: stable-2.14
+          #  python: '3.7'
           - ansible: stable-2.14
             python: '3.8'
           - ansible: stable-2.14
